@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
      <title>DevBuddy - Home</title>
 </head>
 <body>
@@ -37,19 +38,100 @@
     <li><a href="comece-agora.html">Comece agora</a></li>
     <li><a href="#home.html" class="btn-scroll">Depoimentos</a></li>
 </ul>
-<div class="img-inicio"></div>
+<img src="img/Image.png" alt="Imagem inicio" class="imagem-inicio">
 </section>
+
+<section class="sessao-oque-encontra">
+<h3>O que você encontra no DevBuddy</h3>
+</section>
+
+
+<section class="oque-voce-encontra">
+  
+      <div class="caixa" data-aos="fade-right" data-aos-delay="500" data-aos-duration="2000">
+      <img src="img/box1.png" alt="imagem Oque voce encontra" class="imagem-box1">
+      <p class="titulo-box1">Uma variedade de tecnologias.</p>
+      <p class="descricaobox1">De JavaScript e React a Swift e Go, nossos desenvolvedores cobrem tudo.</p>
+      </div>
+
+      <div class="caixa2" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000">
+      <img src="img/box2.png" alt="imagem Oque voce encontra" class="imagem-box2">
+      <p class="titulo-box2">Ajuda de especialistas sobre código.</p>
+      <p class="descricaobox2">Nossos desenvolvedores passam por um rigoroso processo de seleção e seleção, selecionando apenas os melhores.</p>
+      </div>
+
+      <div class="caixa3" class="caixa3" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000">
+      <img src="img/box3.png" alt="imagem Oque voce encontra" class="imagem-box3">
+      <p class="titulo-box3">Configuração sem esforço</p>
+      <p class="descricaobox3">Aproveite nosso processo fácil de configuração e faturamento para se conectar com um desenvolvedor imediatamente.</p>
+      </div>
+
+    
+</section>
+
 
 <section id="Depoimentos">
 <h2>Depoimentos dos nossos usuários</h2>
-<p>Ana Beatriz (Dev Front-end Jr.)
 
-    “Ter alguém pra me orientar mudou tudo. O Lucas me ajudou a montar meu portfólio e me deu várias dicas de entrevistas. Consegui meu primeiro estágio em 2 meses!”</p>
-    <p>Matheus Dias (Dev iniciante)
+<div class="depoimentos-container">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      
+      <!-- Depoimento 1 -->
+      <div class="swiper-slide">
+        <p class="texto-depoimento">"A plataforma é sensacional, me ajudou a evoluir muito rápido!"</p>
+        <h4 class="nome-depoimento">— João Silva</h4>
+      </div>
+      
+      <!-- Depoimento 2 -->
+      <div class="swiper-slide">
+        <p class="texto-depoimento">"Mentorias incríveis e conteúdo de primeira!"</p>
+        <h4 class="nome-depoimento">— Maria Souza</h4>
+      </div>
+      
+      <!-- Depoimento 3 -->
+      <div class="swiper-slide">
+        <p class="texto-depoimento">"Me senti muito acolhido e guiado no meu começo de carreira."</p>
+        <h4 class="nome-depoimento">— Carlos Lima</h4>
+      </div>
 
-        “A didática dos mentores é incrível. O Rafael explicou conceitos que eu não entendia há meses, de um jeito simples. Super recomendo!”</p>
+      <!-- Pode adicionar mais depoimentos aqui -->
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,              // Faz o carrossel ser infinito
+    autoplay: {
+      delay: 4000,            // Tempo entre cada slide (4 segundos)
+      disableOnInteraction: false,  // Continua mesmo se o usuário clicar
+    },
+    speed: 800,               // Velocidade da transição (em milissegundos)
+  });
+</script>
 
 </section>
-    </div>      
+     
+    
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+   
+<script>
+  AOS.init({
+      once: false,          // ❗ Efeito acontece TODA VEZ que aparecer (se quiser só 1x, use true)
+      duration: 2000,        // Duração padrão de 2 segundos
+      offset: 200,           // Começa o efeito 120px antes do elemento aparecer
+      delay: 0               // Sem atraso global (só individual nas caixas)
+    });
+</script>  
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>

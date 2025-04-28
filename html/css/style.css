@@ -1,21 +1,36 @@
 
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
-}
+    
+
+    background-image: url('../img/fundohome.png');
+    background-size: 3000px 1000px; /* Define as dimensões exatas da imagem */
+    background-position: top center; /* Posiciona a imagem no topo da página */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    margin: 0; /* Remove qualquer margem padrão */
+    height: auto; /* Remove a altura fixa e permite rolar */
+    padding: 0;
+    box-sizing: border-box;
+  }
+
  /*Menu*/
  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #44CCCC;
-    height: 80px;
-    width: 100%;
-    max-width: 1340px;
-    padding: 0 20px;
-    margin: 30px auto;
-    border-radius: 40px;
- }
+  position: fixed; /* Faz com que o menu fique fixo no topo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Garante que o menu fique sobre o conteúdo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #44CCCC;
+  height: 80px;
+  width: 1200px; 
+  padding: 0 20px;
+  margin: 30px auto;  
+  border-radius: 40px; /* Ajuste o border-radius se necessário */ 
+}
+ 
 
 .menu-left {
   flex: 0 1 auto;  /* Não ocupa muito espaço */
@@ -130,15 +145,8 @@ body{
   }
 
   
-  .fundo {
-    background-image: url('../img/fundohome.png');
-  
-    background-position: top;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    padding-top: 30px;
-    background-size: 80%;
-  }
+ 
+    
 
   .first h1{ 
     font-family: 'Roboto', sans-serif;
@@ -146,6 +154,7 @@ body{
     font-size: 50px;
     color: #FF6B54;
     text-align: center;
+    margin-top: 150px;
   }
 
   .first h3 {
@@ -153,6 +162,7 @@ body{
     font-size: 25px;
     color: #000000;
     text-align: center;
+    margin-top: 50px;
   }
 
   .first ul {
@@ -161,19 +171,20 @@ body{
     margin: 30px 0;
     display: flex;
     justify-content: center;
-    gap: 300px;
+    gap: 350px;
+    margin-top: 50px;;
   }
   
   .first ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 55px;
+    width: 350px;
+    height: 65px;
     background-color: #44CCCC;
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 29px;
     font-weight: 600;
     text-decoration: none;
     border-radius: 13px;
@@ -187,5 +198,132 @@ body{
   }
   
   
+  .imagem-inicio {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 33%; /* Garante que a imagem seja responsiva */
+  margin-top: 8px; /* Ajuste o valor conforme necessário */
+  }
   
   
+ /*Titulo da sessão "O que você encontra no DevBuddy*/
+.sessao-oque-encontra {
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px; /* Tamanho maior para o título */
+  font-weight: 700; /* Peso mais forte para o título */
+  color: #000000; /* Cor mais escura para o texto */
+  margin-top: 100px;
+  margin-bottom: 90px; /* Espaço entre o título e a descrição */
+  text-align: center;
+}
+
+
+ /* box oque voce encotra no DevBuddy*/
+ .oque-voce-encontra {
+  margin: 50px 0;
+  text-align: center; /* Centraliza todo o conteúdo */
+  display: flex; /* Deixa as caixas lado a lado */
+  justify-content: center; /* Centraliza as caixas na horizontal */
+  gap: 60px; /* Espaço entre as caixas */
+  flex-wrap: wrap; /* Se a tela ficar pequena, quebra para baixo */
+}
+
+.oque-voce-encontra .caixa {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0; /* Tirou o 30px auto */
+  box-shadow: 9px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.oque-voce-encontra .titulo-box1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px; /* Tamanho maior para o texto */
+  font-weight: 600; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 0.5; /* Maior espaçamento entre as linhas */
+}
+
+.oque-voce-encontra .descricaobox1 { 
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Tamanho maior para o texto */
+  font-weight: 400; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 1.5; /* Maior espaçamento entre as linhas */
+}
+
+.oque-voce-encontra .imagem-box1 {
+  width: 230px; /* Faz a imagem ocupar toda a largura da caixa */
+  max-height: 230px; /* Limita a altura máxima da imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.oque-voce-encontra .caixa2 {
+  background-color: #ffffff; /* Fundo branco para a caixa */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento dentro da caixa */
+  max-width: 500px; /* Limita a largura da caixa */
+  box-shadow: 9px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.oque-voce-encontra .titulo-box2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px; /* Tamanho maior para o texto */
+  font-weight: 600; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 0.5; /* Maior espaçamento entre as linhas */
+}
+
+.oque-voce-encontra .descricaobox2 { 
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Tamanho maior para o texto */
+  font-weight: 400; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 1.5; /* Maior espaçamento entre as linhas */
+}
+
+.oque-voce-encontra .imagem-box2 {
+  width: 230px; /* Faz a imagem ocupar toda a largura da caixa */
+  max-height: 230px; /* Limita a altura máxima da imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.oque-voce-encontra .caixa3 {
+  background-color: #ffffff; /* Fundo branco para a caixa */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento dentro da caixa */
+  max-width: 500px; /* Limita a largura da caixa */
+  box-shadow: 9px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.oque-voce-encontra .titulo-box3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px; /* Tamanho maior para o texto */
+  font-weight: 600; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 0.5; /* Maior espaçamento entre as linhas */
+}
+
+.oque-voce-encontra .descricaobox3 { 
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Tamanho maior para o texto */
+  font-weight: 400; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 1.5; /* Maior espaçamento entre as linhas */
+}
+
+.oque-voce-encontra .imagem-box3 {
+  width: 230px; /* Faz a imagem ocupar toda a largura da caixa */
+  max-height: 230px; /* Limita a altura máxima da imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
