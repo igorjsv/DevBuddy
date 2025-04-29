@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
      <title>DevBuddy - Home</title>
 </head>
 <body>
@@ -36,7 +37,8 @@
     <h3>Receba orientação de quem já vive o mercado e avance com segurança na sua carreira como dev.</h3>
 <ul>
     <li><a href="comece-agora.html">Comece agora</a></li>
-    <li><a href="#home.html" class="btn-scroll">Depoimentos</a></li>
+    <li><a href="#depoimentos" class="btn-scroll">Depoimentos</a></li>
+
 </ul>
 <img src="img/Image.png" alt="Imagem inicio" class="imagem-inicio">
 </section>
@@ -60,7 +62,7 @@
       <p class="descricaobox2">Nossos desenvolvedores passam por um rigoroso processo de seleção e seleção, selecionando apenas os melhores.</p>
       </div>
 
-      <div class="caixa3" class="caixa3" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000">
+      <div class="caixa3" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000">
       <img src="img/box3.png" alt="imagem Oque voce encontra" class="imagem-box3">
       <p class="titulo-box3">Configuração sem esforço</p>
       <p class="descricaobox3">Aproveite nosso processo fácil de configuração e faturamento para se conectar com um desenvolvedor imediatamente.</p>
@@ -69,69 +71,112 @@
     
 </section>
 
+<section class="Depoimentos" id="depoimentos">
+  <h2 class="titulo">Depoimentos dos nossos usuários</h2>
 
-<section id="Depoimentos">
-<h2>Depoimentos dos nossos usuários</h2>
-
-<div class="depoimentos-container">
-  <div class="swiper mySwiper">
+  <div class="swiper depoimentos-swiper">
     <div class="swiper-wrapper">
-      
-      <!-- Depoimento 1 -->
       <div class="swiper-slide">
-        <p class="texto-depoimento">"A plataforma é sensacional, me ajudou a evoluir muito rápido!"</p>
-        <h4 class="nome-depoimento">— João Silva</h4>
+        <h4>Isabela Martins (Recém-formada em TI)</h4>
+        <p>“A DevBuddy me deu direção quando eu mais precisava. O Bruno me ensinou a aplicar Python em projetos reais de dados — foi essencial pra eu conseguir uma vaga como analista júnior.”</p>
       </div>
-      
-      <!-- Depoimento 2 -->
       <div class="swiper-slide">
-        <p class="texto-depoimento">"Mentorias incríveis e conteúdo de primeira!"</p>
-        <h4 class="nome-depoimento">— Maria Souza</h4>
+        <h4>Renan Silva (Bootcamp em andamento)</h4>
+        <p>“As sessões com o Thiago me ajudaram a configurar meu ambiente de DevOps, coisa que eu não encontrava nos tutoriais. É outra pegada quando alguém te guia ao vivo.”</p>
       </div>
-      
-      <!-- Depoimento 3 -->
       <div class="swiper-slide">
-        <p class="texto-depoimento">"Me senti muito acolhido e guiado no meu começo de carreira."</p>
-        <h4 class="nome-depoimento">— Carlos Lima</h4>
+        <h4>Matheus Dias (Dev iniciante)</h4>
+        <p>“A didática dos mentores é incrível. O Rafael explicou conceitos que eu não entendia há meses, de um jeito simples. Super recomendo!”</p>
       </div>
-
-      <!-- Pode adicionar mais depoimentos aqui -->
-      
+      <div class="swiper-slide">
+        <h4>Ana Beatriz (Dev Front-end Jr.)</h4>
+        <p>“Ter alguém pra me orientar mudou tudo. O Lucas me ajudou a montar meu portfólio e me deu várias dicas de entrevistas. Consegui meu primeiro estágio em 2 meses!”</p>
+      </div>
+      <div class="swiper-slide">
+        <h4>Carlos Henrique (Estudante de ADS)</h4>
+        <p>“Eu estava completamente perdido no back-end, até começar as mentorias com a Mariana. Hoje já tenho meu primeiro projeto no GitHub com banco de dados!”</p>
+      </div>
+      <div class="swiper-slide">
+        <h4>Júlia Almeida (Transição de carreira)</h4>
+        <p>“Vim da área de marketing e encontrei na DevBuddy uma ponte real pro mundo dev. A Camila me ajudou com meu primeiro app em React Native!”</p>
+      </div>
     </div>
+
+    <!-- Botões -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
-</div>
-
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,              // Faz o carrossel ser infinito
-    autoplay: {
-      delay: 4000,            // Tempo entre cada slide (4 segundos)
-      disableOnInteraction: false,  // Continua mesmo se o usuário clicar
-    },
-    speed: 800,               // Velocidade da transição (em milissegundos)
-  });
-</script>
-
 </section>
-     
-    
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-   
+<section class="rodape"> 
+  <div class="rodape-conteudo">
+
+    <!-- Linha combinada: Coluna esquerda e direita lado a lado -->
+    <div class="linha-inferior">
+      <!-- Coluna esquerda -->
+      <div class="coluna-esquerda">
+        <div class="redes-sociais">
+          <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="img/github.png" alt="GitHub"></a>
+        </div>
+
+        <div class="rodape-texto">
+          <p>© 2025 DevBuddy</p>
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Serviço</a>
+        </div>
+      </div>
+
+      <!-- Coluna direita -->
+      <div class="rodape-direita">
+        <div class="info-contato">
+          <p><strong>Email:</strong> contato@devbuddy.com</p>
+          <p><strong>Endereço:</strong> Av. dos Devs, 1234 - São Paulo/SP</p>
+          <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+        </div>
+        <div class="info-seguranca">
+          <p>🔒 Seus dados estão seguros com a gente. Nosso site é protegido com SSL e segue a LGPD.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
   AOS.init({
-      once: false,          // ❗ Efeito acontece TODA VEZ que aparecer (se quiser só 1x, use true)
-      duration: 2000,        // Duração padrão de 2 segundos
-      offset: 200,           // Começa o efeito 120px antes do elemento aparecer
-      delay: 0               // Sem atraso global (só individual nas caixas)
+    once: false,
+    duration: 2000,
+    offset: 200,
+    delay: 0
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.depoimentos-swiper', {
+      loop: true,
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
-</script>  
-
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+  });
+</script>
+<!-- Scripts -->
 </body>
 </html>

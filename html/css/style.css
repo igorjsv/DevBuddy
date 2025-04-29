@@ -111,14 +111,15 @@ body{
     height: 44px;
     background-color: #ededed;
     border-radius: 60px;
-    padding-left: 45px; /* Espaço para o ícone */
+    padding-left: 45px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     color: #919191;
     border: none;
     outline: none;
     box-sizing: border-box;
-    position: relative; /* Agora é o contêiner do ícone */
+    position: relative;
+    transition: width 0.3s ease; /* Adiciona a transição suave */
   }
   
   /* Ícone de lupa SVG */
@@ -134,14 +135,15 @@ body{
   
   /* Foco na caixa de pesquisa */
   .search-box:focus {
-    background-color: #fff;
+    width: 280px; /* Expande suavemente */
+    background-color: #edededcb;
     border: 2px solid #FF6B54;
   }
   
   /* Quando o usuário digitar, a cor do texto muda para preto */
   .search-box:focus,
   .search-box:not(:placeholder-shown) {
-    color: black; /* Altera a cor do texto para preto */
+    color: rgb(126, 126, 126); /* Altera a cor do texto para preto */
   }
 
   
@@ -172,7 +174,8 @@ body{
     display: flex;
     justify-content: center;
     gap: 350px;
-    margin-top: 50px;;
+    margin-top: 50px;
+    
   }
   
   .first ul li a {
@@ -195,8 +198,12 @@ body{
   .first ul li a:hover {
     background-color: #FF6B54;
     color: #FFFFFF;
+    
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
   
   .imagem-inicio {
     display: block;
@@ -327,3 +334,152 @@ body{
   margin-top: 20px;
   margin-bottom: 20px; /* Espaço abaixo da imagem */
 }
+
+
+.titulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px; /* Tamanho maior para o texto */
+  font-weight: 600; /* Peso normal para o texto */
+  color: #000000; /* Cor mais escura para o texto */
+  line-height: 0.5; /* Maior espaçamento entre as linhas */
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.swiper-slide {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #FF6B54;
+}
+
+.swiper-slide p {
+  font-size: 16px;
+  color: #000000;
+}
+
+
+.swiper-slide {
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.1);
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #44CCCC !important;
+  fill: #44CCCC !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #FF6B54 !important;
+}
+
+.rodape {
+  background-image: url('../img/rodape.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 40px;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 100px;
+}
+
+.rodape-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 20px;
+}
+
+.redes-sociais a img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociais a:hover img {
+  transform: scale(1.1);
+}
+
+.linha-inferior {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+
+.rodape-texto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.rodape-texto a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.rodape-texto a:hover {
+  color: #666;
+}
+
+.rodape-direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinhado à esquerda */
+  gap: 10px;
+  min-width: 280px;
+  text-align: left; /* Alinhamento à esquerda */
+}
+
+.info-contato p,
+.info-seguranca p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.info-seguranca p {
+  color: #666;
+}
+
+.coluna-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+}
+
+
