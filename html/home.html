@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-     <title>DevBuddy - Home</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="../img/DevBuddy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/DevBuddy-logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/DevBuddy-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/DevBuddy-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/DevBuddy-logo.png">
+    <link rel="manifest" href="caminho/para/site.webmanifest">
+    <title>DevBuddy - Home</title>
 </head>
 <body>
-    <div class="fundo">
-        <nav class="menu">
-            <ul class="menu-left">
-              <!-- Logo ou qualquer conteúdo adicional se necessário -->
-            </ul>
-          
-            <ul class="menu-center">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="sobre-nós.html">Sobre Nós</a></li>
-              <li><a href="mentoria.html">Mentoria</a></li>
-              <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
-            </ul>
-          
-            <div class="search-container">
-              <input type="text" class="search-box" placeholder="Pesquisar...">
-              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M23 20l-5.5-5.5c1.2-1.7 1.9-3.8 1.9-6.2C19.4 4.3 15.1 0 10 0S.6 4.3.6 9.2 4.9 18.4 10 18.4c2.3 0 4.5-.9 6.2-2.4L20 23l3-3zM10 14.4c-2.9 0-5.2-2.3-5.2-5.2 0-2.9 2.3-5.2 5.2-5.2 2.9 0 5.2 2.3 5.2 5.2 0 2.9-2.3 5.2-5.2 5.2z"/>
-              </svg>
-            </div>
-          </nav>
+  <nav class="menu">
+    <!-- Botão hamburguer (visível apenas em mobile) -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <span class="hamburguer"></span>
+    </button>
+    
+    <!-- Itens do menu centralizados -->
+    <div class="menu-center">
+      <ul class="itens">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="mentoria.html">Mentoria</a></li>
+        <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+      </ul>
+    </div>
+    
+    <!-- Caixa de Pesquisa -->
+    <div class="campo-pesquisa">
+      <input type="text" class="search-box" placeholder="Pesquisar...">
+    </div>
+  </nav>
+      
    
+          
     
     
 <section class="first">
@@ -40,7 +49,7 @@
     <li><a href="#depoimentos" class="btn-scroll">Depoimentos</a></li>
 
 </ul>
-<img src="img/Image.png" alt="Imagem inicio" class="imagem-inicio">
+<img src="../img/Image.png" alt="Imagem inicio" class="imagem-inicio">
 </section>
 
 <section class="sessao-oque-encontra">
@@ -51,19 +60,19 @@
 <section class="oque-voce-encontra">
   
       <div class="caixa" data-aos="fade-right" data-aos-delay="500" data-aos-duration="2000">
-      <img src="img/box1.png" alt="imagem Oque voce encontra" class="imagem-box1">
+      <img src="../img/box1.png" alt="imagem Oque voce encontra" class="imagem-box1">
       <p class="titulo-box1">Uma variedade de tecnologias.</p>
       <p class="descricaobox1">De JavaScript e React a Swift e Go, nossos desenvolvedores cobrem tudo.</p>
       </div>
 
       <div class="caixa2" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000">
-      <img src="img/box2.png" alt="imagem Oque voce encontra" class="imagem-box2">
+      <img src="../img/box2.png" alt="imagem Oque voce encontra" class="imagem-box2">
       <p class="titulo-box2">Ajuda de especialistas sobre código.</p>
       <p class="descricaobox2">Nossos desenvolvedores passam por um rigoroso processo de seleção e seleção, selecionando apenas os melhores.</p>
       </div>
 
       <div class="caixa3" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000">
-      <img src="img/box3.png" alt="imagem Oque voce encontra" class="imagem-box3">
+      <img src="../img/box3.png" alt="imagem Oque voce encontra" class="imagem-box3">
       <p class="titulo-box3">Configuração sem esforço</p>
       <p class="descricaobox3">Aproveite nosso processo fácil de configuração e faturamento para se conectar com um desenvolvedor imediatamente.</p>
       </div>
@@ -116,10 +125,10 @@
       <!-- Coluna esquerda -->
       <div class="coluna-esquerda">
         <div class="redes-sociais">
-          <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
-          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-          <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="img/github.png" alt="GitHub"></a>
+          <a href="#"><img src="../img/linkedin.png" alt="LinkedIn"></a>
+          <a href="#"><img src="../img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="../img/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../img/github.png" alt="GitHub"></a>
         </div>
 
         <div class="rodape-texto">
@@ -148,35 +157,10 @@
 
 
 
-
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-  AOS.init({
-    once: false,
-    duration: 2000,
-    offset: 200,
-    delay: 0
-  });
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.depoimentos-swiper', {
-      loop: true,
-      slidesPerView: 3,
-      centeredSlides: true,
-      spaceBetween: 30,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  });
-</script>
+<script src="../js/main.js"></script>
 <!-- Scripts -->
 </body>
 </html>
