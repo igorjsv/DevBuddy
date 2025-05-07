@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="../img/DevBuddy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
+    
+    <title>DevBuddy - Comece agora</title>
+</head>
+<body>
+
+    <nav class="menu">
+        <img src="../img/logo menor.png" alt="Logo menu">
+        <!-- Botão hamburguer (visível apenas em mobile) -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span class="hamburguer"></span>
+         
+        </button>
+        
+        <!-- Itens do menu centralizados -->
+        <div class="menu-center">
+          <ul class="itens">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="sobre-nos.html">Sobre Nós</a></li>
+            <li><a href="mentoria.html">Mentoria</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        
+        <!-- Caixa de Pesquisa -->
+        <div class="campo-pesquisa">
+          <input type="text" class="search-box" placeholder="Pesquisar...">
+        </div>
+      </nav>
+
+
+    <div class="form-container">
+        <form id="formulario">
+          <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          <div id="erro-email" class="mensagem-erro" style="display: none;">
+            <i>⚠️</i> <span></span>
+          </div>
+      
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+          <div id="erro-senha" class="mensagem-erro" style="display: none;">
+            <i>⚠️</i> <span></span>
+          </div>
+      
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+<script src="../js/login.js"></script>
+</body>
+</html>

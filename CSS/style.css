@@ -46,6 +46,12 @@ body{
   min-height: 80px; /* Adicionei uma altura mínima */
 }
 
+.menu img{
+  margin-left: 200px; /* Move para a direita */
+  width: 8%; /* Diminui para metade da largura original */
+  height: auto; /* Mantém a proporção */
+
+}
 
 .menu-center {
   position: absolute;
@@ -64,7 +70,7 @@ body{
 .itens a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  font-size: 1.3rem; /* Aumentei um pouco o tamanho da fonte */
+  font-size: 1.5rem; /* Aumentei um pouco o tamanho da fonte */
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease;
@@ -96,7 +102,7 @@ body{
 /* Container da caixa de pesquisa */
 .campo-pesquisa {
     margin-left: auto;
-    margin-right: 250px;
+    margin-right: 150px;
 }
 
 /* Estilo da caixa de pesquisa */
@@ -107,7 +113,7 @@ body{
   background-color: #f1f1f1;
   font-size: 1rem; /* Aumentei o tamanho da fonte */
   color: #333;
-  width: 350px; /* Largura maior */
+  width: 300px; /* Largura maior */
   height: 45px; /* Altura definida */
   transition: all 0.3s ease;
   outline: none;
@@ -161,6 +167,13 @@ body{
   .menu {
     flex-wrap: wrap;
     padding: 10px 15px;
+  }
+
+  .menu img {
+    width: 60px; /* Tamanho menor para mobile */
+    margin-left: auto; /* Empurra para a direita */
+    margin-right: 20px; /* Espaço da borda */
+    order: 3; /* Mantém no final (direita) */
   }
   
   /* Centraliza a barra de pesquisa */
@@ -223,17 +236,17 @@ body{
     margin-left: auto; /* Alinha à direita */
     width: auto; /* Largura automática */
     /* Para ajustar posição: */
-    margin-right: 130px; /* Espaço da borda */
+    margin-right: 10px; /* Espaço da borda */
   }
 
   .search-box {
-    width: 300px; /* Largura em mobile */
+    width: 200px; /* Largura em mobile */
     /* Para expandir quando em foco: */
     transition: all 0.3s ease;
   }
   
   .search-box:focus {
-    width: 350px; /* Largura expandida */
+    width: 220px; /* Largura expandida */
   }
 }
 
@@ -595,6 +608,7 @@ color: #FF6B54 !important;
 /*Rodape*/
 .rodape {
 background-image: url('../img/rodape.png');
+
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -701,7 +715,7 @@ min-width: 280px;
   
   .redes-sociais {
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 50px;
   }
   
@@ -726,3 +740,158 @@ min-width: 280px;
 
 /*Fim do Rodape*/
 
+
+/*Pagina Sobre Nós*/
+
+.sobre-nos {
+  display: flex;
+  justify-content: center;
+  padding: 150px 20px;
+  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.card-principal {
+  background-color: #ededed;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  transform: perspective(1000px) rotateX(1deg);
+}
+
+.titulo {
+  font-size: 2.2rem;
+  color: #FF6B54;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+}
+
+.card-principal p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.missao h3 {
+  font-size: 1.6rem;
+  color: #2C2C2C;
+  margin-bottom: 15px;
+}
+
+.missao i {
+  color: #FF6B54;
+  margin-right: 8px;
+}
+
+.visao-valores h3 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  color: #2C2C2C;
+  border-left: 6px solid #FF6B54;
+  padding-left: 12px;
+}
+
+.valores-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* sempre 2 colunas */
+  gap: 24px;
+}
+
+.valor-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transform: scale(1);
+}
+
+.valor-card:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05) rotateX(2deg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 70px 70px 70px 70px; /* formato alterado no hover */
+}
+
+.valor-card i {
+  font-size: 2rem;
+  color: #FF6B54;
+  margin-bottom: 10px;
+}
+
+.valor-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #2C2C2C;
+}
+
+.valor-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Fim Pagina Sobre Nós*/
+
+/*Login*/
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 150px;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+  font-size: 16px;
+  margin-bottom: 12px; /* Espaço entre os campos */
+}
+
+input[type="email"].erro, input[type="password"].erro {
+  border-color: #ff4d4d;
+  background-color: #ffe5e5;
+}
+
+.mensagem-erro {
+  color: #ff4d4d;
+  margin-top: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.mensagem-erro i {
+  font-size: 18px; /* Garantir tamanho adequado para o ícone */
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #FF6B54;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e05c48;
+}
+
+
+/*Fim Login*/
