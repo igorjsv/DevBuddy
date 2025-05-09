@@ -1,42 +1,58 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Menu mobile
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  
+  menuToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('active');
+    
+    // Alternar atributo ARIA para acessibilidade
+    const isExpanded = menu.classList.contains('active');
+    this.setAttribute('aria-expanded', isExpanded);
+  });
+
+  // Fechar menu ao clicar fora
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target)) {
+      menu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Fechar menu ao clicar em um link
+  document.querySelectorAll('.itens a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
-    const itensMenu = document.querySelector('.itens');
-    
-    // Abrir/fechar com o botão hamburguer
-    menuToggle.addEventListener('click', function(e) {
-      e.stopPropagation(); // Impede que o clique propague
+
+    menuToggle.addEventListener('click', function () {
       menu.classList.toggle('active');
     });
-    
-    // Fechar ao clicar fora
-    document.addEventListener('click', function(e) {
-      // Verifica se o clique foi fora do menu
-      if (!menu.contains(e.target) && menu.classList.contains('active')) {
-        menu.classList.remove('active');
-      }
-    });
-    
-    // Impede que o clique nos itens do menu feche
-    itensMenu.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
   });
 
+  // Inicializações adicionais (AOS, Swiper, etc)
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      once: false,
+      duration: 2000,
+      offset: 200,
+      delay: 0
+    });
+  }
 
-  AOS.init({
-    once: false,
-    duration: 2000,
-    offset: 200,
-    delay: 0
-  });
-
-  document.addEventListener('DOMContentLoaded', function () {
+  if (typeof Swiper !== 'undefined') {
     const swiper = new Swiper('.depoimentos-swiper', {
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: 1,
+      spaceBetween: 20,
       centeredSlides: true,
-      spaceBetween: 30,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
@@ -45,40 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        }
+      }
     });
-  });
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburgerBtn = document.querySelector('.hamburger-btn');
-  const menuContainer = document.querySelector('.menu-container');
-  
-  // Controle do menu hambúrguer
-  hamburgerBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    this.classList.toggle('active');
-    menuContainer.classList.toggle('active');
-  });
-
-  // Fechar menu ao clicar fora
-  document.addEventListener('DOMContentLoaded', function() {
-  const hamburgerBtn = document.querySelector('.hamburger-btn');
-  const menuContainer = document.querySelector('.menu-container');
-  
-  hamburgerBtn.addEventListener('click', function() {
-    this.classList.toggle('active');
-    menuContainer.classList.toggle('active');
-    document.body.style.overflow = menuContainer.classList.contains('active') ? 'hidden' : '';
-  });
-  
-  // Fechar menu ao clicar nos links
-  document.querySelectorAll('.menu-center a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburgerBtn.classList.remove('active');
-      menuContainer.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
+  }
 });
-})
